@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:remove="all">Order Confirmation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	
+	
+<img src="http://ceart3996.cloudapp.net:8080/app/assets/img/logo_relatorio.png" alt="CEART">	
+	
+<table>
+  <tr>
+    <td colspan="2">Nº Protocolo: <span th:text="${atendimento.anoProtocolo}"></span>/<span th:text="${atendimento.numeroProtocolo}"></span></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Data Atendimento: </td>
+    <td class="tg-yw4l"><span th:text="${#dates.format(atendimento.data, 'dd/MM/yyyy')}"></span></br></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td colspan="4"><br></td>
+  </tr>  
+  <tr>
+    <td colspan="4">Dados do Solicitante:</td>
+  </tr>
+  <tr>
+    <td colspan="2">Nome: </td>
+    <td colspan="2"><span th:text="${atendimento.solicitante}"></span></td>
+  </tr>
+  <tr>
+    <td colspan="2">CPF: </td>
+    <td colspan="2"><span th:text="${atendimento.cpfCnpj}"> </span></td>
+  </tr>
+  <tr>
+    <td colspan="2">Municipio: </td>
+    <td colspan="2"><span th:text="${atendimento.municipio.nome}"> </span></td>
+  </tr>
+  <tr>
+    <td colspan="2">Insituição: </td>
+    <td colspan="2"><span th:text="${atendimento.instituicao}"> </span></td>
+  </tr>
+  <tr>
+    <td colspan="2">Cargo: </td>
+    <td colspan="2"><span th:text="${atendimento.cargo}"></span></td>
+  </tr>
+  <tr>
+    <td colspan="2">Telefones: </td>
+    <td colspan="2"><span th:text="${atendimento.telefone1}"></span> / <span th:text="${atendimento.telefone2}"></span> </td>
+  </tr>
+  <tr>
+    <td colspan="4"><br></td>
+  </tr>    
+  <tr>
+    <td colspan="2">Tipo de Atendimento: </td>
+    <td colspan="2"><span th:text="${atendimento.tipoAtendimento.nome}"></span> </td>
+  </tr>
+  <tr>
+    <td colspan="2">Opção de Atendimento: </td>
+    <td colspan="2"><span th:text="${atendimento.opcaoAtendimento.nome}"></span></td>
+  </tr>
+    <tr>
+    <td colspan="4"><br></td>
+  </tr> 
+  <tr>
+    <td colspan="2">Descrição: </td>
+    <td colspan="2"><span th:text="${atendimento.descricao}"></span></td>
+  </tr> 
+  
+         
+      
+</table>
+</body>
+</html>
